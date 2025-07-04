@@ -65,6 +65,7 @@
     <section id="feedback" class="contact container section">
       <h2>Tem alguma sugestão para melhorar este site?</h2>
       <br>
+      
       <form name="sugestao" method="POST" data-netlify="true">
         <textarea name="mensagem" placeholder="Sua sugestão para melhorar o site..." required rows="5" style="width: 100%; padding: 1rem; border-radius: 0.5rem; border: 1px solid #ccc;"></textarea>
         <button type="submit" class="btn" style="margin-top: 1rem;">Enviar sugestão</button>
@@ -75,26 +76,6 @@
       <p class="container">© 2025 Iury Keller · STREAMLINE SYSTEMS</p>
     </footer>
 
-    <script>
-      // Toggle menu em telas pequenas
-      const toggle = document.querySelector('.nav-toggle');
-      const navLinks = document.querySelector('.nav-links');
-      toggle.addEventListener('click', () => {
-        const expanded = toggle.getAttribute('aria-expanded') === 'true' || false;
-        toggle.setAttribute('aria-expanded', !expanded);
-        navLinks.classList.toggle('open');
-      });
-
-      // Dark / Light mode
-      const themeBtn = document.querySelector('.theme-toggle');
-      const userPref = localStorage.getItem('theme');
-      if (userPref === 'dark') document.body.classList.add('dark');
-      themeBtn.addEventListener('click', () => {
-        document.body.classList.toggle('dark');
-        const mode = document.body.classList.contains('dark') ? 'dark' : 'light';
-        localStorage.setItem('theme', mode);
-        themeBtn.textContent = mode === 'dark' ? '☀️' : '🌙';
-      });
-    </script>
+    <script src="index.js"></script>
   </body>
 </html>
